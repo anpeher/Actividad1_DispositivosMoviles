@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.actividad1
 
 class DibujosProvider {
 

@@ -1,4 +1,4 @@
-package com.example.recyclerview.adapter
+package com.example.actividad1.adapter
 
 import android.view.View
 import android.widget.ImageView
@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.actividad1.R
-import com.example.recyclerview.Dibujo
+import com.example.actividad1.Dibujo
 
 
 class DibujosViewHolder(view:View):RecyclerView.ViewHolder (view)  {

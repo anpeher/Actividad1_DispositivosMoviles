@@ -1,10 +1,11 @@
-package com.example.recyclerview.adapter
+package com.example.actividad1.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recyclerview.Dibujo
-import com.example.recyclerview.R
+import com.example.actividad1.R
+import com.example.actividad1.Dibujo
+
 
 class DibujosAdapter(private val dibujoList:List<Dibujo>) : RecyclerView.Adapter<DibujosViewHolder>(){
 
