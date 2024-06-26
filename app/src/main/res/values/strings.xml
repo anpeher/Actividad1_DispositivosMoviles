@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Actividad1</string>
+    <string name="app_name">primeraApp</string>
+    <string name="hint_name">nombre</string>
+    <string name="formulario_button_add">Publicar</string>
+    <string name="hint_content">contenido</string>
+    <string name="button_mainPage">Regresar</string>
+    <string name="descripcionImagen">uso de un documento para adornar el cuestionario</string>
 </resources>
