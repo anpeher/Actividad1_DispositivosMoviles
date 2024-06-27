@@ -10,12 +10,12 @@ import com.example.actividad1.adapter.DibujosAdapter
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var tvGoPrincipal: ImageView
+    private lateinit var tvGoPrincipal: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initRecyclerView()
-        tvGoPrincipal = findViewById<ImageView>(R.id.tvPrincipal)
+        tvGoPrincipal = findViewById(R.id.tvPrincipal)
         tvGoPrincipal.setOnClickListener{
             goToLogin()
         }

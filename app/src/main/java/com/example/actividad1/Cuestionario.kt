@@ -60,11 +60,11 @@ class Cuestionario : AppCompatActivity() {
         }
     }
 
-    fun isValidUrl(Url: String): Boolean {
+    private fun isValidUrl(url: String): Boolean {
         val urlPattern = Pattern.compile(
             "^(https?|ftp)://[\\w.-]+(?:\\.[\\w.-]+)+[/\\w._-]*\\??[^#]*#?.*$",
             Pattern.CASE_INSENSITIVE
         )
-        return urlPattern.matcher(Url).matches()
+        return urlPattern.matcher(url).matches()
     }
 }
