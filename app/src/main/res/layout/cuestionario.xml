@@ -25,7 +25,6 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@+id/logoLogin">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -49,18 +48,37 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSerie"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+
+            android:hint="@string/hint_serie">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eSerie"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/lightGreen"
+                android:inputType="textPersonName">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilContenido"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="100dp"
 
-            android:layout_marginBottom="40dp"
-            android:hint="@string/hint_content">
+            android:hint="@string/hint_url">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/eContenido"
                 android:layout_width="300dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:background="@color/lightblue"
                 android:inputType="text">
