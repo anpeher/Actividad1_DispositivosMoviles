@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
+import java.util.regex.Pattern
 
 
 class Cuestionario : AppCompatActivity() {
@@ -32,26 +33,38 @@ class Cuestionario : AppCompatActivity() {
         eUrl = findViewById(R.id.eURL)
         buttonInsertar = findViewById(R.id.buttonComentar)
         buttonInsertar.setOnClickListener{
-
-            val name = eName.text.toString()
-            val serie = eSerie.text.toString()
-            val imageUrl = eUrl.text.toString()
-
-            if (name.isNotEmpty() && serie.isNotEmpty() && imageUrl.isNotEmpty()) {
-
-                //DibujosProvider.addDibujo(Dibujo(name, serie, imageUrl))
-                Toast.makeText(this, "Dibujo añadido!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show()
-
-            }
+            insertImage(eName.text.toString(),eSerie.text.toString(),eUrl.text.toString())
 
         }
 
     }
 
     private fun goToPrincipal(){
-        val i = Intent(this,MainActivity::class.java)
+        val i = Intent(this,Principal::class.java)
         startActivity(i)
+    }
+
+    private fun insertImage(name: String, serie: String, imageUrl: String){
+        if (name.isNotEmpty() && serie.isNotEmpty() && imageUrl.isNotEmpty()) {
+
+            if(isValidUrl(imageUrl)){
+                DibujosProvider.addDibujo(Dibujo(name, serie, imageUrl))
+                Toast.makeText(this, "Dibujo añadido!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Dirección URL no valida", Toast.LENGTH_SHORT).show()
+            }
+
+        } else {
+            Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show()
+
+        }
+    }
+
+    fun isValidUrl(Url: String): Boolean {
+        val urlPattern = Pattern.compile(
+            "^(https?|ftp)://[\\w.-]+(?:\\.[\\w.-]+)+[/\\w._-]*\\??[^#]*#?.*$",
+            Pattern.CASE_INSENSITIVE
+        )
+        return urlPattern.matcher(Url).matches()
     }
 }

@@ -3,7 +3,7 @@ package com.example.actividad1
 class DibujosProvider {
 
     companion object {
-        val dibujosList = listOf<Dibujo>(
+        val dibujosList = mutableListOf<Dibujo>(
             Dibujo( "Goku",
                 "Dragon ball",
                 "https://depor.com/resizer/dV5TqPnaHmZP6yMI_GfeKL28T6I=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/OCJ6ZQ4G4RHMRGDRYR7UBZQ6PY.jpg"
@@ -37,6 +37,12 @@ class DibujosProvider {
                 "https://i.pinimg.com/originals/15/58/23/1558234467c251f0fe1d16a2c20c15f4.jpg"
             )
 
+
+
         )
+
+        fun addDibujo(dibujo: Dibujo) {
+            dibujosList.add(dibujo)
+        }
     }
 }
