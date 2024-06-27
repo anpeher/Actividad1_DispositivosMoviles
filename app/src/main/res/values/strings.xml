@@ -9,4 +9,6 @@
     <string name="DescriptionImageArrow">Flecha para volver a la pantalla principal</string>
     <string name="hint_serie">serie</string>
     <string name="hint_url">Url(solo de la imagen)</string>
+    <string name="addDibujo">Dibujo insertado!</string>
+    <string name="addDibujoBadRequest">Debes rellenar todos los campos</string>
 </resources>
