@@ -5,4 +5,6 @@
     <string name="hint_content">contenido</string>
     <string name="button_mainPage">Regresar</string>
     <string name="descripcionImagen">uso de un documento para adornar el cuestionario</string>
+    <string name="tvLogin">Volver a la pantalla principal</string>
+    <string name="DescriptionImageArrow">Flecha para volver a la pantalla principal</string>
 </resources>

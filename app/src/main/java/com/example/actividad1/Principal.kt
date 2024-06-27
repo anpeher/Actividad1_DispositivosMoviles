@@ -1,20 +1,38 @@
 package com.example.actividad1
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class Principal : AppCompatActivity() {
+
+    lateinit var tvGoCuestionario: TextView
+    lateinit var tvGoDibujos: TextView
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.principal)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        tvGoCuestionario = findViewById<TextView>(R.id.tvPrincipal)
+        tvGoCuestionario.setOnClickListener{
+            goToDibujos()
         }
+        tvGoDibujos = findViewById<TextView>(R.id.tvCuestionario)
+        tvGoDibujos.setOnClickListener{
+            goToCuestionario()
+        }
+
+    }
+
+    private fun goToCuestionario(){
+        val i = Intent(this,Cuestionario::class.java)
+        startActivity(i)
+    }
+
+    private fun goToDibujos(){
+        val i = Intent(this,MainActivity::class.java)
+        startActivity(i)
     }
 }
