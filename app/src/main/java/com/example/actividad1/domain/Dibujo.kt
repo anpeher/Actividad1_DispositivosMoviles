@@ -1,4 +1,4 @@
-package com.example.actividad1
+package com.example.actividad1.domain
 
 data class Dibujo (
     val name:String,

@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
-class Principal : AppCompatActivity() {
+class PrincipalActivity : AppCompatActivity() {
 
     lateinit var tvGoCuestionario: TextView
     lateinit var tvGoDibujos: TextView
@@ -18,31 +18,31 @@ class Principal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.principal)
         tvGoCuestionario = findViewById<TextView>(R.id.tvPrincipal)
-        tvGoCuestionario.setOnClickListener{
+        tvGoCuestionario.setOnClickListener {
             goToDibujos()
         }
         tvGoDibujos = findViewById<TextView>(R.id.tvCuestionario)
-        tvGoDibujos.setOnClickListener{
+        tvGoDibujos.setOnClickListener {
             goToCuestionario()
         }
         tvGoImagenes = findViewById<TextView>(R.id.tvImagenes)
-        tvGoImagenes.setOnClickListener{
+        tvGoImagenes.setOnClickListener {
             goToImagenes()
         }
     }
 
-    private fun goToCuestionario(){
-        val i = Intent(this,Cuestionario::class.java)
+    private fun goToCuestionario() {
+        val i = Intent(this, CuestionarioActivity::class.java)
         startActivity(i)
     }
 
-    private fun goToDibujos(){
-        val i = Intent(this,MainActivity::class.java)
+    private fun goToDibujos() {
+        val i = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
 
-    private fun goToImagenes(){
-        val i = Intent(this,ImageActivity::class.java)
+    private fun goToImagenes() {
+        val i = Intent(this, ImageActivity::class.java)
         startActivity(i)
     }
 }

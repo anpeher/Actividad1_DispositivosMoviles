@@ -1,4 +1,6 @@
-package com.example.actividad1
+package com.example.actividad1.services
+
+import com.example.actividad1.domain.Dibujo
 
 class DibujosProvider {
 
