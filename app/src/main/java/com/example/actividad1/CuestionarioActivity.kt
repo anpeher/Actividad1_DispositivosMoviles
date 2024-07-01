@@ -13,7 +13,7 @@ import com.google.android.material.textfield.TextInputEditText
 import java.util.regex.Pattern
 
 
-class Cuestionario : AppCompatActivity() {
+class CuestionarioActivity : AppCompatActivity() {
 
     private lateinit var eName: TextInputEditText
     private lateinit var eSerie: TextInputEditText
@@ -40,7 +40,7 @@ class Cuestionario : AppCompatActivity() {
     }
 
     private fun goToPrincipal() {
-        val i = Intent(this, Principal::class.java)
+        val i = Intent(this, PrincipalActivity::class.java)
         startActivity(i)
     }
 

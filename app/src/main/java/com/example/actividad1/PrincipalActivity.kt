@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
-class Principal : AppCompatActivity() {
+class PrincipalActivity : AppCompatActivity() {
 
     lateinit var tvGoCuestionario: TextView
     lateinit var tvGoDibujos: TextView
@@ -32,7 +32,7 @@ class Principal : AppCompatActivity() {
     }
 
     private fun goToCuestionario() {
-        val i = Intent(this, Cuestionario::class.java)
+        val i = Intent(this, CuestionarioActivity::class.java)
         startActivity(i)
     }
 
