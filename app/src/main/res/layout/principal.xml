@@ -18,7 +18,12 @@
         android:id="@+id/tvPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de elementos"/>
-
+        android:text="Lista de elementos"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tvImagenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imagenes"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
