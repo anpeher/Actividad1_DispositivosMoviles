@@ -17,15 +17,15 @@
         <activity
             android:name=".PrincipalActivity"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".ImageActivity"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".CuestionarioActivity"
             android:exported="true"
