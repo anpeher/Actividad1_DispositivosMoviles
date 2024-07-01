@@ -23,6 +23,10 @@
             android:exported="false"
             android:launchMode="singleInstance"/>
         <activity
+            android:name=".ImageActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"/>
+        <activity
             android:name=".Cuestionario"
             android:exported="true"
             android:launchMode="singleInstance">
