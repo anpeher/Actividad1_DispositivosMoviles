@@ -7,6 +7,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.actividad1.domain.Dibujo
+import com.example.actividad1.services.DibujosProvider
 import com.google.android.material.textfield.TextInputEditText
 import java.util.regex.Pattern
 
@@ -36,7 +38,6 @@ class Cuestionario : AppCompatActivity() {
             insertImage(eName.text.toString(),eSerie.text.toString(),eUrl.text.toString())
 
         }
-
     }
 
     private fun goToPrincipal(){

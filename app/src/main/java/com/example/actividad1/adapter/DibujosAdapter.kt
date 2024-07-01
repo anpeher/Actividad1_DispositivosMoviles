@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.actividad1.R
-import com.example.actividad1.Dibujo
+import com.example.actividad1.domain.Dibujo
 
 
 class DibujosAdapter(private val dibujoList:List<Dibujo>) : RecyclerView.Adapter<DibujosViewHolder>(){

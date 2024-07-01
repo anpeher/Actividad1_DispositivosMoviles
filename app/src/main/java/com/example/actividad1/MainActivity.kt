@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.actividad1.adapter.DibujosAdapter
+import com.example.actividad1.services.DibujosProvider
 
 class MainActivity : AppCompatActivity() {
 
