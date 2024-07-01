@@ -9,16 +9,15 @@ import com.example.actividad1.R
 import com.example.actividad1.domain.Dibujo
 
 
-class DibujosViewHolder(view:View):RecyclerView.ViewHolder (view)  {
+class DibujosViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val dibujoPhoto = view.findViewById<ImageView>(R.id.dibujoImage)
     val dibujoName = view.findViewById<TextView>(R.id.dibujoName)
     val dibujoSerie = view.findViewById<TextView>(R.id.dibujoSerie)
 
-    fun render(dibujoModel: Dibujo){
+    fun render(dibujoModel: Dibujo) {
         dibujoName.text = dibujoModel.name
         dibujoSerie.text = dibujoModel.serie
         Glide.with(dibujoPhoto.context).load(dibujoModel.photo).into(dibujoPhoto)
-
     }
 }
