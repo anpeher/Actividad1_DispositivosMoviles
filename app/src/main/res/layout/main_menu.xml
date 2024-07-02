@@ -37,20 +37,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Cuestionario" />
+            android:text="@string/mainMenuAddCharacter" />
 
         <Button
             android:id="@+id/tvPrincipal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Lista de elementos" />
+            android:text="@string/mainMenuListCharacters" />
 
         <Button
             android:id="@+id/tvImagenes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Imagenes" />
+            android:text="@string/mainMenuImage" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
