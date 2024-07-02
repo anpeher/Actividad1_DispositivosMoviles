@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToLogin() {
-        val i = Intent(this, PrincipalActivity::class.java)
+        val i = Intent(this, MainMenuActivity::class.java)
         startActivity(i)
     }
 }

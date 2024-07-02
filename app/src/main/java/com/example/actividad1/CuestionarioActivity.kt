@@ -3,7 +3,7 @@ package com.example.actividad1
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +19,7 @@ class CuestionarioActivity : AppCompatActivity() {
     private lateinit var eSerie: TextInputEditText
     private lateinit var eUrl: TextInputEditText
     private lateinit var buttonInsertar: Button
-    private lateinit var tvGoPrincipal: TextView
+    private lateinit var tvGoPrincipal: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +40,7 @@ class CuestionarioActivity : AppCompatActivity() {
     }
 
     private fun goToPrincipal() {
-        val i = Intent(this, PrincipalActivity::class.java)
+        val i = Intent(this, MainMenuActivity::class.java)
         startActivity(i)
     }
 
