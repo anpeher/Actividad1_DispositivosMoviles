@@ -14,4 +14,5 @@
     <string name="mainMenuAddCharacter">Añadir personaje</string>
     <string name="mainMenuListCharacters">Lista de personajes</string>
     <string name="mainMenuImage">Imagen</string>
+    <string name="iconDescription">Icon image</string>
 </resources>
