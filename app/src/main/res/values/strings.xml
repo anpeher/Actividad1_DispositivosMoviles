@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">primeraApp</string>
+    <string name="app_name">Dibujos del Ayer</string>
     <string name="hint_name">nombre</string>
     <string name="formulario_button_add">Publicar</string>
     <string name="hint_content">contenido</string>

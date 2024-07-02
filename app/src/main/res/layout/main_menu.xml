@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center"
-    android:layout_gravity="center_vertical"
-    tools:context=".MainMenuActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
-        android:id="@+id/tvCuestionario"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cuestionario"
-        android:layout_marginBottom="10dp" />
-    <Button
-        android:id="@+id/tvPrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lista de elementos"
-        android:layout_marginBottom="10dp"/>
-    <Button
-        android:id="@+id/tvImagenes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Imagenes"/>
+    >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/icon"
+        ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name">
+        </TextView>
+    </RelativeLayout>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainMenuActivity">
+
+        <Button
+            android:id="@+id/tvCuestionario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Cuestionario" />
+
+        <Button
+            android:id="@+id/tvPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Lista de elementos" />
+
+        <Button
+            android:id="@+id/tvImagenes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagenes" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
