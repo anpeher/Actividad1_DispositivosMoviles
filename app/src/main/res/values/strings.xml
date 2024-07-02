@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">primeraApp</string>
+    <string name="app_name">Dibujos del Ayer</string>
     <string name="hint_name">nombre</string>
     <string name="formulario_button_add">Publicar</string>
     <string name="hint_content">contenido</string>
@@ -11,5 +11,9 @@
     <string name="hint_url">Url(solo de la imagen)</string>
     <string name="addDibujo">Dibujo insertado!</string>
     <string name="addDibujoBadRequest">Debes rellenar todos los campos</string>
+    <string name="mainMenuAddCharacter">Añadir personaje</string>
+    <string name="mainMenuListCharacters">Lista de personajes</string>
+    <string name="mainMenuImage">Imagen</string>
+    <string name="iconDescription">Icon image</string>
     <string name="formulario">Formulario</string>
 </resources>
