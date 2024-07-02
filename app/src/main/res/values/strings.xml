@@ -11,4 +11,5 @@
     <string name="hint_url">Url(solo de la imagen)</string>
     <string name="addDibujo">Dibujo insertado!</string>
     <string name="addDibujoBadRequest">Debes rellenar todos los campos</string>
+    <string name="formulario">Formulario</string>
 </resources>

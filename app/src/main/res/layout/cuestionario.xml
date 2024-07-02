@@ -8,6 +8,28 @@
     tools:context=".CuestionarioActivity">
 
     <ImageView
+        android:id="@+id/tvPrincipal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/DescriptionImageArrow"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/flecha"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Formulario"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="@id/tvPrincipal"
+        app:layout_constraintBottom_toBottomOf="@id/tvPrincipal"
+        app:layout_constraintStart_toEndOf="@id/tvPrincipal"
+        android:text="@string/formulario"
+        android:layout_marginStart="75dp"/>
+
+    <ImageView
         android:id="@+id/logoLogin"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -15,7 +37,7 @@
         app:srcCompat="@drawable/hoja"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="100dp"
         />
 
     <LinearLayout
@@ -25,6 +47,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:text="@string/formulario"
         app:layout_constraintTop_toBottomOf="@+id/logoLogin">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -104,12 +127,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="@string/formulario_button_add" />
-
-        <TextView
-            android:id="@+id/tvPrincipal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tvLogin"/>
 
     </LinearLayout>
 
