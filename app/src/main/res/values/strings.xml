@@ -15,4 +15,5 @@
     <string name="mainMenuListCharacters">Lista de personajes</string>
     <string name="mainMenuImage">Imagen</string>
     <string name="iconDescription">Icon image</string>
+    <string name="formulario">Formulario</string>
 </resources>
