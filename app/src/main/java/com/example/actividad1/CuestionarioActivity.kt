@@ -40,7 +40,7 @@ class CuestionarioActivity : AppCompatActivity() {
     }
 
     private fun goToPrincipal() {
-        val i = Intent(this, PrincipalActivity::class.java)
+        val i = Intent(this, MainMenuActivity::class.java)
         startActivity(i)
     }
 

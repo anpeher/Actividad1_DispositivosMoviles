@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
-class PrincipalActivity : AppCompatActivity() {
+class MainMenuActivity : AppCompatActivity() {
 
     lateinit var tvGoCuestionario: TextView
     lateinit var tvGoDibujos: TextView
@@ -16,7 +16,7 @@ class PrincipalActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.principal)
+        setContentView(R.layout.main_menu)
         tvGoCuestionario = findViewById<TextView>(R.id.tvPrincipal)
         tvGoCuestionario.setOnClickListener {
             goToDibujos()
