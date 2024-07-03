@@ -6,7 +6,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 
-// Definición de la clase ImageActivity que hereda de AppCompatActivity
+/**
+ * Definición de la clase ImageActivity que hereda de AppCompatActivity
+  */
+
 class ImageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

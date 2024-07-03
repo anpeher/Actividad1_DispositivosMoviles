@@ -2,7 +2,10 @@ package com.example.actividad1.domain
 
 import java.util.regex.Pattern
 
-// Compilación de un patrón de expresión regular para URLs con soporte para http, https y ftp
+/**
+ * Compilación de un patrón de expresión regular para URLs con soporte para http, https y ftp
+  */
+
 private val urlPattern = Pattern.compile(
         "^(https?|ftp)://[\\w.-]+(?:\\.[\\w.-]+)+[/\\w._-]*\\??[^#]*#?.*$",
         Pattern.CASE_INSENSITIVE

@@ -2,7 +2,9 @@ package com.example.actividad1.services
 
 import com.example.actividad1.domain.Dibujo
 
-// Definición de la clase llamada 'DibujosProvider'
+/**
+ * Clase que contiene los datos que se les pasa al RecyclerView
+ */
 class DibujosProvider {
 
     companion object {
@@ -47,6 +49,10 @@ class DibujosProvider {
         )
 
         // Función para agregar un nuevo 'Dibujo' a la lista 'dibujosList'
+        /**
+         *  Función para agregar un nuevo 'Dibujo' a la lista 'dibujosList'
+         *  @param dibujo: clase dibujo que se va a añadir
+         */
         fun addDibujo(dibujo: Dibujo) {
             dibujosList.add(dibujo)
         }
