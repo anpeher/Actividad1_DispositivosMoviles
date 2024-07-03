@@ -4,19 +4,25 @@ import com.example.actividad1.domain.Dibujo
 import junit.framework.TestCase.assertNotNull
 import org.junit.Test
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Prueba de Junit para comprobar el domain/Dibujo, que se encarga de validar URL´s
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class CuestionarioActivityTest {
     private lateinit var dibujo: Dibujo
 
+    /**
+     * Valida que no se acepte URL´s incorrectas
+     */
     @Test(expected = IllegalArgumentException::class)
     fun create_dibujo_with_non_valid_url() {
         val url = "http/:/wrong.url.com"
         dibujo = Dibujo("Test", "TestSerie", url)
     }
 
+    /**
+     * Valida que se acepte URL´s correctas
+     */
     @Test
     fun create_dibujo() {
         val url = "http://valid-url.com"
