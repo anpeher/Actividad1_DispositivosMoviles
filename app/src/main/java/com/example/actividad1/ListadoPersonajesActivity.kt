@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.actividad1.adapter.DibujosAdapter
 import com.example.actividad1.services.DibujosProvider
 
-class MainActivity : AppCompatActivity() {
+class ListadoPersonajesActivity : AppCompatActivity() {
 
     private lateinit var tvGoPrincipal: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.listado_personajes)
         initRecyclerView()
         tvGoPrincipal = findViewById(R.id.tvPrincipal)
         tvGoPrincipal.setOnClickListener {

@@ -37,7 +37,7 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     private fun goToDibujos() {
-        val i = Intent(this, MainActivity::class.java)
+        val i = Intent(this, ListadoPersonajesActivity::class.java)
         startActivity(i)
     }
 
