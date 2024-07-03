@@ -40,7 +40,6 @@ class ListadoPersonajesActivity : AppCompatActivity() {
         recyclerView.adapter = DibujosAdapter(DibujosProvider.dibujosList)
     }
 
-    //
     /**
      * Carga los elementos cada vez que la actividad se vuelve visible, para que actualice el initCrecyclerView()
      * con los nuevos datos de DibujoProvider
