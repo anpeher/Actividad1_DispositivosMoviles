@@ -9,32 +9,51 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.actividad1.adapter.DibujosAdapter
 import com.example.actividad1.services.DibujosProvider
 
-class MainActivity : AppCompatActivity() {
+/**
+ * En esta página se crea el RecyclerView
+ */
+class ListadoPersonajesActivity : AppCompatActivity() {
 
     private lateinit var tvGoPrincipal: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.listado_personajes)
         initRecyclerView()
         tvGoPrincipal = findViewById(R.id.tvPrincipal)
         tvGoPrincipal.setOnClickListener {
-            goToLogin()
+            goToMainMenu()
         }
     }
 
+
+    /**
+     * Inicializa el RecyclerView para mostrar la lista de dibujos.
+     *
+     * Este método configura el RecyclerView asignándole un gestor de diseño y un adaptador.
+     * y un adaptador. El gestor de diseño determina cómo se organizan los elementos.
+     */
     private fun initRecyclerView() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerDibujo)
+        //crea una lista vertical de elementos
         recyclerView.layoutManager = LinearLayoutManager(this)
+        //el adapatador nos provee los datos para insertarlos en el RecyclerView
         recyclerView.adapter = DibujosAdapter(DibujosProvider.dibujosList)
     }
 
+    //
+    /**
+     * Carga los elementos cada vez que la actividad se vuelve visible, para que actualice el initCrecyclerView()
+     * con los nuevos datos de DibujoProvider
+     */
     override fun onResume() {
         super.onResume()
-        // Carga los elementos cada vez que la actividad se vuelve visible
         initRecyclerView()
     }
 
-    private fun goToLogin() {
+    /**
+     * navegación para ir al menu principal
+     */
+    private fun goToMainMenu() {
         val i = Intent(this, MainMenuActivity::class.java)
         startActivity(i)
     }

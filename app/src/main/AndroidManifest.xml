@@ -24,7 +24,7 @@
                 </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ListadoPersonajesActivity"
             android:exported="false"
             android:launchMode="singleInstance" />
         <activity
