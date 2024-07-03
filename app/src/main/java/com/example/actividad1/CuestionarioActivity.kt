@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.actividad1.domain.Dibujo
 import com.example.actividad1.services.DibujosProvider
 import com.google.android.material.textfield.TextInputEditText
-import java.util.regex.Pattern
 
 
 class CuestionarioActivity : AppCompatActivity() {
@@ -44,24 +43,33 @@ class CuestionarioActivity : AppCompatActivity() {
         startActivity(i)
     }
 
+    /**
+     * Metodo que se ejecuta onSubmit del formulario
+     *
+     * @param name nombre del personaje a anyadir
+     * @param serie serie del personaje a anyadir
+     * @param imageUrl url de la imagen que se usa en el listado
+     */
     private fun insertImage(name: String, serie: String, imageUrl: String) {
-        if (name.isNotEmpty() && serie.isNotEmpty() && imageUrl.isNotEmpty()) {
-            if (isValidUrl(imageUrl)) {
-                DibujosProvider.addDibujo(Dibujo(name, serie, imageUrl))
-                Toast.makeText(this, "Dibujo añadido!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Dirección URL no valida", Toast.LENGTH_SHORT).show()
-            }
-        } else {
-            Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show()
-        }
-    }
+        // Definimos la variable dibujo que se inicializa posteriormente
+        lateinit var dibujo: Dibujo
 
-    private fun isValidUrl(url: String): Boolean {
-        val urlPattern = Pattern.compile(
-            "^(https?|ftp)://[\\w.-]+(?:\\.[\\w.-]+)+[/\\w._-]*\\??[^#]*#?.*$",
-            Pattern.CASE_INSENSITIVE
-        )
-        return urlPattern.matcher(url).matches()
+        // Validate input
+        if (name.isEmpty() || serie.isEmpty() || imageUrl.isEmpty()) {
+            Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Crear dibujo. Si hay errores en la validacion mostrar mensaje y return
+        try {
+            dibujo = Dibujo(name, serie, imageUrl)
+        } catch (e: IllegalArgumentException) {
+            Toast.makeText(this, "Dirección URL no valida", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Si todo ha ido bien anyadimos el dibujo
+        DibujosProvider.addDibujo(dibujo)
+        Toast.makeText(this, "Dibujo añadido!", Toast.LENGTH_SHORT).show()
     }
 }
