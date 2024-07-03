@@ -1,7 +1,7 @@
 package com.example.actividad1
 
-import junit.framework.TestCase.assertEquals
-import org.junit.Before
+import com.example.actividad1.domain.Dibujo
+import junit.framework.TestCase.assertNotNull
 import org.junit.Test
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -9,23 +9,18 @@ import org.junit.Test
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class CuestionarioActivityTest {
-    private lateinit var cuestionarioActivity: CuestionarioActivity
+    private lateinit var dibujo: Dibujo
 
-    @Before
-    fun setUp() {
-        cuestionarioActivity = CuestionarioActivity()
+    @Test(expected = IllegalArgumentException::class)
+    fun create_dibujo_with_non_valid_url() {
+        val url = "http/:/wrong.url.com"
+        dibujo = Dibujo("Test", "TestSerie", url)
     }
 
     @Test
-    fun image_url_validation_non_complient_with_regex() {
-        val url = "http/:/wrong.url.com"
-
-        val method = CuestionarioActivity::class.java.getDeclaredMethod("isValidUrl")
-        method.apply {
-            isAccessible = true
-        }
-        val params = arrayOfNulls<String>(1)
-        params[0] = url
-        assertEquals(true, method.invoke(cuestionarioActivity, *params))
+    fun create_dibujo() {
+        val url = "http://valid-url.com"
+        dibujo = Dibujo("Test", "TestSerie", url)
+        assertNotNull(dibujo)
     }
 }
