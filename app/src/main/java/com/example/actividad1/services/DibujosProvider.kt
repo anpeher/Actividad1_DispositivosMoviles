@@ -2,10 +2,13 @@ package com.example.actividad1.services
 
 import com.example.actividad1.domain.Dibujo
 
+// Definición de la clase llamada 'DibujosProvider'
 class DibujosProvider {
 
     companion object {
+        // Lista mutable que almacenará objetos de tipo 'Dibujo'
         val dibujosList = mutableListOf<Dibujo>(
+            // Añadiendo objetos 'Dibujo' a la lista con sus propiedades name, serie y photo
             Dibujo( "Goku",
                 "Dragon ball",
                 "https://depor.com/resizer/dV5TqPnaHmZP6yMI_GfeKL28T6I=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/OCJ6ZQ4G4RHMRGDRYR7UBZQ6PY.jpg"
@@ -43,6 +46,7 @@ class DibujosProvider {
 
         )
 
+        // Función para agregar un nuevo 'Dibujo' a la lista 'dibujosList'
         fun addDibujo(dibujo: Dibujo) {
             dibujosList.add(dibujo)
         }
