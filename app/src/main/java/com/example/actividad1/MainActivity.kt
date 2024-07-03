@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = DibujosAdapter(DibujosProvider.dibujosList)
     }
 
+    override fun onResume() {
+        super.onResume()
+        // Carga los elementos cada vez que la actividad se vuelve visible
+        initRecyclerView()
+    }
+
     private fun goToLogin() {
         val i = Intent(this, MainMenuActivity::class.java)
         startActivity(i)
