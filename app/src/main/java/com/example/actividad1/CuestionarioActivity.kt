@@ -1,5 +1,6 @@
 package com.example.actividad1
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -36,6 +37,9 @@ class CuestionarioActivity : AppCompatActivity() {
         buttonInsertar = findViewById(R.id.buttonComentar)
         buttonInsertar.setOnClickListener {
             insertImage(eName.text.toString(), eSerie.text.toString(), eUrl.text.toString())
+            eName.setText("")
+            eSerie.setText("")
+            eUrl.setText("")
         }
     }
 
@@ -49,6 +53,13 @@ class CuestionarioActivity : AppCompatActivity() {
             if (isValidUrl(imageUrl)) {
                 DibujosProvider.addDibujo(Dibujo(name, serie, imageUrl))
                 Toast.makeText(this, "Dibujo añadido!", Toast.LENGTH_SHORT).show()
+                val sharedPreferences = getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("image_url", imageUrl)
+                editor.apply()
+                val i = Intent(this, ImageActivity::class.java)
+                startActivity(i)
+
             } else {
                 Toast.makeText(this, "Dirección URL no valida", Toast.LENGTH_SHORT).show()
             }
