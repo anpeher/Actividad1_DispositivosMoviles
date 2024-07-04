@@ -16,4 +16,6 @@
     <string name="mainMenuImage">Imagen</string>
     <string name="iconDescription">Icon image</string>
     <string name="formulario">Formulario</string>
+    <string name="textImageActivity">Aquí se mostrara la última imagen añadida</string>
+    <string name="descriptionImagenImageLayout">ultima imagen que sube un usuario</string>
 </resources>

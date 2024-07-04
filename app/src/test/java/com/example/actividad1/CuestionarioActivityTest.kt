@@ -15,7 +15,7 @@ class CuestionarioActivityTest {
      * Valida que no se acepte URL´s incorrectas
      */
     @Test(expected = IllegalArgumentException::class)
-    fun create_dibujo_with_non_valid_url() {
+    fun createDibujowithNonValidUrl() {
         val url = "http/:/wrong.url.com"
         dibujo = Dibujo("Test", "TestSerie", url)
     }
@@ -24,7 +24,7 @@ class CuestionarioActivityTest {
      * Valida que se acepte URL´s correctas
      */
     @Test
-    fun create_dibujo() {
+    fun createDibujo() {
         val url = "http://valid-url.com"
         dibujo = Dibujo("Test", "TestSerie", url)
         assertNotNull(dibujo)
